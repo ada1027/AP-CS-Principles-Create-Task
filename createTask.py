@@ -1,5 +1,5 @@
 # Transform parabola coordinate given the equation with the transformations, y =  a(x-h)^2+k
-def identifyVariablesInEquation(equation):
+def identifyVariablesInEquation(equation : str) -> list:
     listValues = []
     equalSign = equation.find("=")
     bracketOpen = equation.find("(")
@@ -21,7 +21,7 @@ def identifyVariablesInEquation(equation):
     listValues.append(k)
     return listValues
 
-def printTransformationValueA(listOfValues):
+def printTransformationValueA(listOfValues : list):
     aValue = listOfValues[0]
     absoluteA = abs(aValue)
     hValue = listOfValues[1]
@@ -43,7 +43,7 @@ def printTransformationValueA(listOfValues):
     elif kValue < 0:
         print("Shift down" , absoluteK , "units")
 
-def transformCoordinate(xVal, yVal, listValues):
+def transformCoordinate(xVal : int, yVal : int, listValues : list) -> int:
     aVal = listValues[0]
     hVal = listValues[1]
     kVal = listValues[2]
